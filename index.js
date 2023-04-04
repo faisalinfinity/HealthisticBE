@@ -7,6 +7,7 @@ const { cartRoute } = require("./routes/cartRoute");
 const { orderRoute } = require("./routes/orderRoute");
 const { adminOrderRoute } = require("./routes/admin.orderRoute");
 const { adminProductRoute } = require("./routes/admin.productRoute"); 
+const mediagenix = require("./routes/mediagenix");
 
 const app = express();
 app.use(express.json());
@@ -18,7 +19,7 @@ app.use("/users/cart", cartRoute);
 app.use("/users/order",orderRoute)
 app.use("/admin/order",adminOrderRoute)
 app.use("/admin/product",adminProductRoute)
-              
+app.use("/mediagenix",mediagenix)       
 
 app.listen(process.env.PORT, async () => {
   try {
