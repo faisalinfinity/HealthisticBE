@@ -25,7 +25,7 @@ mediagenix.delete("/:id",async(req,res)=>{
 mediagenix.get("/",async(req,res)=>{
      let {email}=req.body
     try {
-        let data =mediagenixModel.find({email:email})
+        let data = await mediagenixModel.find({email:email})
         res.json(data)
     } catch (error) {
         res.send(error.message)
