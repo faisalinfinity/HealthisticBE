@@ -48,7 +48,7 @@ const GetProduct = async (req, res) => {
 
         return obj;
       });
-      data = data.and(filterArray);
+      data = data.or(filterArray);
     } else if (filterCriteria) {
       let obj = {};
       let arr = filterCriteria.split(":");
