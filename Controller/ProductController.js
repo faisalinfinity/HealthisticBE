@@ -38,6 +38,7 @@ const GetProduct = async (req, res) => {
       obj[arr[0]] = arr[1];
       data = data.sort(obj);
     }
+    
     if (filterCriteria && Array.isArray(filterCriteria)) {
       //Checking filtetCriteria is an array or not because if single filter is passed it received as one obj instead of array
       const filterArray = filterCriteria.map((el) => {
